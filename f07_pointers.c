@@ -32,4 +32,18 @@ int main() {
 
     printf("uninit: %p \n", uninit);
 //    printf("*uninit: %d \n", *uninit);
+
+    printf("----------------------------------------\n");
+
+    int x = 1234;
+    int* px = &x;
+    int** ppx = &px;
+    printf("x: %d \n", x);
+    printf("px: %p \n", px);
+    printf("ppx: %p \n", ppx);
+    printf("&x: %p \n", &x);
+//    printf("&&x: %p \n", &&x);
+    printf("*px: %i \n", *px);
+//    printf("**px: %i \n", **px);
+    printf("**ppx: %i \n", **ppx);
 }

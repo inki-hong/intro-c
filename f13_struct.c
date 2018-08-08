@@ -15,4 +15,19 @@ int main() {
     Fraction frac2;
     frac2.numerator = 6;
     frac2.denominator = 21;
+
+    /****************************************/
+
+    typedef struct coordinate {
+        double x;
+        double y;
+    } Coordinate;
+
+    Coordinate coord1;
+    coord1.x = 1.5;
+    coord1.y = 2.4;
+
+    Coordinate* pc = &coord1;
+    printf("x: %f \n", (*pc).x);
+    printf("x: %f \n", pc->x);
 }

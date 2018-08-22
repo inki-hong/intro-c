@@ -12,13 +12,13 @@ int main() {
 	int int_array[] = {1, 2, 1, 3, 1, 4, 1, 5, 1};
 	int int_max = INT_MIN;
 	int n = sizeof(int_array) / sizeof(int);
-	find_max(int_array, &int_max, n, sizeof(int) * sizeof(char), cmp_int);
+	find_max(int_array, &int_max, n, sizeof(int), cmp_int);
 	printf("Max %d\n", int_max);
 	
 	float float_array[] = {0.1, 0.2, 0.3, 0.2};
 	float float_max = FLT_MIN;
 	n = sizeof(float_array) / sizeof(float);
-	find_max(float_array, &float_max, n, sizeof(float) * sizeof(char), cmp_float);
+	find_max(float_array, &float_max, n, sizeof(float), cmp_float);
 	printf("Max %.2f\n", float_max);
 
 	return 0;

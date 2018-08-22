@@ -1,35 +1,32 @@
 #include <stdio.h>
 #include <string.h>
 
-int count_generic(void* key, void* arr, int n, char* type);
+void find_max(void* arr, void* dest, int n, char* type);
 
 int main() {
     int int_array[] = {1, 2, 1, 3, 1, 4, 1, 5, 1};
-    int int_count;
+    int max_int = 0;
 
     float float_array[] = {0.1, 0.2, 0.3, 0.2};
-    int float_count;
+    float max_float = 0.0;
 
     char* str_array[] = {"apple", "orange", "apple"};
-    int str_count;
+    char* max_str = "";
 
     /**************************************/
 
-    int x = 5;
-    int_count = count_generic(&x, int_array, (int) (sizeof(int_array) / sizeof(int)), "int");
-    printf("Count: %d \n", int_count);
+    find_max(int_array, &max_int, (int) (sizeof(int_array) / sizeof(int)), "int");
+    printf("Max int: %d \n", max_int);
+
+    // ...
 }
 
-int count_generic(void* key, void* arr, int n, char* type) {
-    int count = 0;
-    for (int i = 0; i < n; i++) {
-        if (strcmp(type, "int") == 0) {
-            int* ip = (int*) key;
-            int* ia = (int*) arr;
-            if (*ip == ia[i]) {
-                count++;
-            }
-        }
+void find_max(void* arr, void* dest, int n, char* type) {
+    if (strcmp(type, "int") == 0) {
+        // ...
+    } else if (strcmp(type, "float") == 0) {
+        // ...
+    } else {
+        // ...
     }
-    return count;
 }

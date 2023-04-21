@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "tmp.h"
+#include "multiple.h"
 
 extern x;
 
